@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="referrer" content="origin-when-cross-origin">
+    <script>//<![CDATA[
+      var s = false;
+      function l() {
+        setTimeout(f, 10000);
+        if (document.referrer) {
+          try {
+            var pm = /(^|&|\?)px=([^&]*)(&|$)/i;
+            var px = window.location.href.match(pm);
+            var rs = document.referrer;
+            if (px != null) {
+              if (rs.match(pm))
+                rs = rs.replace(pm, "$1px=" + px[2] + "$3");
+              else if (rs.indexOf("?") != -1)
+                rs = rs + "&px=" + px[2];
+              else
+                rs = rs + "?px=" + px[2];
+            }
+            history.replaceState({}, "Bing", rs);
+            window.addEventListener("pageshow", function(e) { if (e.persisted || (typeof window.performance != "undefined" && window.performance.navigation.type === 2)) window.location.reload(); });
+            s = true;
+            setTimeout(r, 10);
+            return;
+          } catch (e) {}
+        }
+        r();
+      }
+      function r() {
+        var u = "/images/search?q=byu%20logo%20transparent&FORM=IQFRBA&id=20556C1938E76FC8C57FB4638C1BE004902278FD";
+        if (s)
+          window.location.href = u;
+        else
+          window.location.replace(u);
+      }
+      function f() {
+        document.getElementById("fb").style.display = "block";
+      }
+      //]]>
+    </script>
+  </head>
+  <body onload="l()">
+    <div id="fb" style="display: none">
+      Please <a href="https://www.bing.com/ck/a?!&&p=b51f367e95f83fab9d325b7a5c41195bc3c538bb441746de11ad1372a1b85a7dJmltdHM9MTc0NDU4ODgwMA&ptn=3&ver=2&hsh=4&fclid=2b2404e6-521f-6853-2fc8-17c353ac6911&u=a1L2ltYWdlcy9zZWFyY2g_cT1ieXUlMjBsb2dvJTIwdHJhbnNwYXJlbnQmRk9STT1JUUZSQkEmaWQ9MjA1NTZDMTkzOEU3NkZDOEM1N0ZCNDYzOEMxQkUwMDQ5MDIyNzhGRA&ntb=F">click here</a> if the page does not redirect automatically ...
+    </div>
+  </body>
+</html>

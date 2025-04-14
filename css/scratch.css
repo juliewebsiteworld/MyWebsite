@@ -1,0 +1,84 @@
+html, body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.common{
+    text-align: center;
+    font-family: 'Courier New', Courier, monospa
+}
+/* Header */
+.header h1{
+    margin: 0;
+}
+.header{
+    background-color: lightpink;
+    color: black;
+    height: 100px;
+    line-height: 100px;
+}
+
+/* Navigation styling */
+nav {
+    background-color: #bebbbb;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav a {
+    color: #333;
+    text-decoration: none;
+    margin: 0 20px;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #e91e63;
+}
+
+/* Main content container */
+
+
+/* List styling */
+
+    ul, ol {
+        display: inline-block; /* Makes the lists behave like block elements but centered */
+        color: #2e2c2c; /* Grey font color for lists */
+        margin: 0 auto; /* Centers the lists horizontally */
+        text-align: left
+}
+.body{
+    background-color:rgb(227, 227, 227);
+}
+/* Image styling */
+img {
+    display: block;
+    width: 25%;
+    margin-left: auto;
+    margin-right: auto;
+    border: 5px solid #000;
+}
+
+/* YouTube video and Tableau */
+iframe, .tableauPlaceholder {
+    display: block;
+    margin: 30px auto;
+    max-width: 100%;
+    border: 5px solid #000;
+}
+
+/* Footer */
+.footer {
+    background-color: #000;
+    color: white;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    font-size: 16px;
+}
+
+  
